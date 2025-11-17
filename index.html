@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Post Anything</title>
+        <style>
+            body {
+                text-align: center;
+                background-color: #222;
+                color: white;
+                font-family: 'consolas', monospace;
+            }
+            #postdiv {
+                display: grid;
+                border: 2px solid white;
+                border-radius: 3%;
+                background-color: #666;
+                width: 300px;
+                height: 200px;
+                margin: 0 auto;
+                margin-top: 100px;
+                place-items: center;
+            }
+            input {
+                background-color: white;
+                border-radius: 5%;
+                transform: scale(1.5);
+            }
+            button {
+                transform: scale(2);
+                background-color: #2a7;
+                border-radius: 10px;
+                font-family: 'consolas', monospace;
+                font-weight: bold;
+            }
+            button:hover {
+                background-color: #3b7;
+                transform: scale(2.2);
+                transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+            }
+        </style>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+    <body>
+        <h1>Say Something!</h1>
+        <p>You can enter anything and hit Enter.</p>
+        <p>What are you waiting? Post something!</p>
+
+        <div id="postdiv">
+            <input type="text" placeholder="Enter anything" id="postBox">
+            <span id="error" style="display:none;color:red;">⚠️ That's already been posted.</span>
+            <span id="success" style="display:none;color:#9bf282;">Upload Success!</span>
+            <button type="button" id="submit">Post</button>
+        </div>
+
+        <script src="script.js" type="module"></script>
+    </body>
+</html>
